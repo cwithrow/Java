@@ -1,0 +1,30 @@
+Pretty Scheduler Readme
+
+This is a Preemptive Scheduler I created for an assignment in my Operating Systems course. 
+(Professor said points for pretty, hence the "art" in main)
+
+* Main reads in input file and passes to chosen scheduler object, in regular or debug mode,
+* which schedules the processes into a Gantt chart, such as described here 
+* https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/5_CPU_Scheduling.html
+*
+* input file --> [Main] --> List of [Process] --> [Scheduling algorithm]
+*
+* Java 8 lambdas are used for this set of schedulers.
+*
+* Scheduler manages queues (array lists) for access to CPU and IO based 
+* on the method chosen by the user. The collection of processes on the queues 
+* are sorted using comparators so that the desired process is located at index 0 of the queue.
+* The ID of this process is then printed as a string in the CPU or IO array 
+* and the process removed from queue.
+*
+
+Format of input file:
+
+The expected text file will have the number of processes, followed by a separate line
+with 4 integers with information about each process:
+arrival time on queue, priority level, process time, number of CPU bursts (int)
+
+Each process is assigned an ID (character) and its info stored as a Process record.
+
+
+--Candice Withrow 4/6/15---
